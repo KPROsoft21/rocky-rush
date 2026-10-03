@@ -294,36 +294,19 @@ class Game:
             pygame.quit()
 
     def show_intro(self) -> bool:
-        dinosaur = Dinosaur()
-        dinosaur.is_blinking = True
-
-        callout_rect = self.assets.callout.get_rect(left=int(WIDTH * 0.05), top=int(HEIGHT * 0.4))
-        logo_rect = self.assets.logo.get_rect(center=(int(WIDTH * 0.6), int(HEIGHT * 0.6)))
-        ground_frames, ground_rect = load_sprite_sheet("ground.png", 15, 1, colorkey=-1)
-        ground_rect.left = WIDTH // 20
-        ground_rect.bottom = HEIGHT
+        logo_rect = self.assets.logo.get_rect(topleft=(0, 0))
 
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     return False
                 if event.type == pygame.KEYDOWN and event.key in (pygame.K_SPACE, pygame.K_UP):
-                    dinosaur.is_blinking = False
-                    dinosaur.jump()
-
-            dinosaur.update()
+                    return True
 
             self.screen.fill(BACKGROUND)
-            self.screen.blit(ground_frames[0], ground_rect)
-            if dinosaur.is_blinking:
-                self.screen.blit(self.assets.logo, logo_rect)
-                self.screen.blit(self.assets.callout, callout_rect)
-            self.screen.blit(dinosaur.image, dinosaur.rect)
+            self.screen.blit(self.assets.logo, logo_rect)
             pygame.display.flip()
             self.clock.tick(FPS)
-
-            if not dinosaur.is_jumping and not dinosaur.is_blinking:
-                return True
 
     def play_round(self) -> bool:
         game_speed = 4
@@ -479,7 +462,7 @@ class Game:
         checkpoint = self._load_sound("checkPoint.wav")
         replay_button, _ = load_image("replay_button.png", 35, 31, -1)
         game_over, _ = load_image("game_over.png", 190, 11, -1)
-        logo, _ = load_image("logo.png", 240, 40, -1)
+        logo, _ = load_image("logo.png", WIDTH, HEIGHT, -1)
         callout, _ = load_image("call_out.png", 196, 45, -1)
         number_images, number_rect = load_sprite_sheet("numbers.png", 12, 1, 11, 13, -1)
         hi_label = pygame.Surface((22, 13))
