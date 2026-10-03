@@ -1,4 +1,6 @@
 <img width="93" height="87" alt="Screenshot 2026-10-03 at 4 51 18 PM" src="https://github.com/user-attachments/assets/0585860a-e2b7-4816-8f68-2f8b1d69a47f" />
+<img width="1297" height="1213" alt="Pixel Green Dinosaur Logo" src="https://github.com/user-attachments/assets/1c02495a-98d4-4ae2-be01-8b67f0eac538" />
+
 
 # Rocky Rush
 
