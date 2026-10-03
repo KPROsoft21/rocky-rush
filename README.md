@@ -1,6 +1,6 @@
 
 <div align="center">
-   <img width="2051" height="767" alt="logo" src="https://github.com/user-attachments/assets/fef71e7d-46d3-43d6-be31-4944e5b2a32d" />
+   ![logo](<img width="2051" height="767" alt="logo" src="https://github.com/user-attachments/assets/fef71e7d-46d3-43d6-be31-4944e5b2a32d" />)
    
    # Rocky Rush
    
