@@ -1,7 +1,8 @@
-<img width="93" height="87" alt="Pixel Green Dinosaur Logo" src="https://github.com/user-attachments/assets/1c02495a-98d4-4ae2-be01-8b67f0eac538" />
-
-
-# Rocky Rush
+<div align="center">
+  <img width="100" height="100" alt="Rocky Rush Dinosaur" src="https://github.com/KPROsoft21/rocky-rush/raw/main/src/rocky_rush/assets/sprites/dino.png" />
+  
+  # Rocky Rush
+</div>
 
 Rocky Rush (2022) is a small arcade runner built with Python and pygame. It is inspired by the classic Chrome Dino game: jump over cacti, duck under flying obstacles, and chase a higher score as the game speeds up.
 
