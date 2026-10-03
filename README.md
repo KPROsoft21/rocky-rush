@@ -1,7 +1,6 @@
 
 <div align="center">
-   ![logo](<img width="2051" height="767" alt="logo" src="https://github.com/user-attachments/assets/fef71e7d-46d3-43d6-be31-4944e5b2a32d" />)
-   
+   <img width="489" height="86" alt="logo (1)" src="https://github.com/user-attachments/assets/22d95860-8658-4394-a1a6-dc3c8c28202b" />
    # Rocky Rush
    
    **An Arcade Runner Game Built with Python**
