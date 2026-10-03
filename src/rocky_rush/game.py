@@ -79,6 +79,25 @@ def score_digits(score: int, width: int = 5) -> list[int]:
     return [int(digit) for digit in f"{max(score, 0):0{width}d}"[-width:]]
 
 
+def pre_init_audio() -> None:
+    try:
+        pygame.mixer.pre_init(44100, -16, 2, 2048)
+    except (AttributeError, ImportError, ModuleNotFoundError, NotImplementedError):
+        pass
+
+
+def mixer_ready() -> bool:
+    try:
+        return bool(pygame.mixer.get_init())
+    except (AttributeError, ImportError, ModuleNotFoundError, NotImplementedError):
+        return False
+
+
+def play_sound(sound: pygame.mixer.Sound | None) -> None:
+    if sound and mixer_ready():
+        sound.play()
+
+
 class Dinosaur(pygame.sprite.Sprite):
     def __init__(self) -> None:
         super().__init__()
@@ -107,8 +126,7 @@ class Dinosaur(pygame.sprite.Sprite):
 
         self.is_jumping = True
         self.velocity_y = -self.jump_speed
-        if jump_sound and pygame.mixer.get_init():
-            jump_sound.play()
+        play_sound(jump_sound)
 
     def update(self) -> None:
         if self.is_jumping:
@@ -259,7 +277,7 @@ class GameAssets:
 
 class Game:
     def __init__(self) -> None:
-        pygame.mixer.pre_init(44100, -16, 2, 2048)
+        pre_init_audio()
         pygame.init()
         pygame.display.set_caption("Rocky Rush")
 
@@ -342,16 +360,15 @@ class Game:
             if pygame.sprite.spritecollide(player, pteras, False, pygame.sprite.collide_mask):
                 player.is_dead = True
 
-            if player.is_dead and self.assets.die_sound and pygame.mixer.get_init():
-                self.assets.die_sound.play()
+            if player.is_dead:
+                play_sound(self.assets.die_sound)
 
             if counter % 700 == 699:
                 game_speed += 1
                 ground.speed = -game_speed
 
             if player.score and player.score % 100 == 0 and player.counter % 7 == 0:
-                if self.assets.checkpoint_sound and pygame.mixer.get_init():
-                    self.assets.checkpoint_sound.play()
+                play_sound(self.assets.checkpoint_sound)
 
             counter += 1
             self.clock.tick(FPS)
@@ -475,9 +492,12 @@ class Game:
 
     @staticmethod
     def _load_sound(filename: str) -> pygame.mixer.Sound | None:
-        if not pygame.mixer.get_init():
+        if not mixer_ready():
             return None
-        return pygame.mixer.Sound(asset_path(filename))
+        try:
+            return pygame.mixer.Sound(asset_path(filename))
+        except (pygame.error, AttributeError, ImportError, ModuleNotFoundError, NotImplementedError):
+            return None
 
 
 def main() -> None:

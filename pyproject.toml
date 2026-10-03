@@ -7,7 +7,7 @@ name = "rocky-rush"
 version = "1.0.0"
 description = "A polished pygame runner inspired by Chrome Dino."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.14"
 authors = [{ name = "Kibur Esmehayal" }]
 dependencies = ["pygame>=2.5"]
 

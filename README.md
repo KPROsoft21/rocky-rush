@@ -20,7 +20,7 @@ Rocky Rush (2022) is a small arcade runner built with Python and pygame. It is i
 ## Quick Start
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python main.py
@@ -31,6 +31,8 @@ You can also run it as a module:
 ```bash
 PYTHONPATH=src python -m rocky_rush
 ```
+
+Python 3.10 through 3.13 is recommended. Python 3.14 can currently build pygame without optional image/audio modules on some systems.
 
 ## Project Structure
 
