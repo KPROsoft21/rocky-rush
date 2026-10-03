@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rocky-rush"
+version = "1.0.0"
+description = "A polished pygame runner inspired by Chrome Dino."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Kibur Esmehayal" }]
+dependencies = ["pygame>=2.5"]
+
+[project.scripts]
+rocky-rush = "rocky_rush.game:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+rocky_rush = ["assets/sprites/*"]
