@@ -1,6 +1,7 @@
-
 <div align="center">
-   <img width="489" height="86" alt="logo (1)" src="https://github.com/user-attachments/assets/22d95860-8658-4394-a1a6-dc3c8c28202b" />
+   <img width="1297" height="1213" alt="Pixel Green Dinosaur Logo" src="https://github.com/user-attachments/assets/079405b9-7b29-44c4-8f52-02c4bf94ce82" />
+</div>
+   
    # Rocky Rush
    
    **An Arcade Runner Game Built with Python**
