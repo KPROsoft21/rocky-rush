@@ -1,5 +1,5 @@
 <div align="center">
-   <img width="93" height="87" alt="Pixel Green Dinosaur Logo" src="https://github.com/user-attachments/assets/079405b9-7b29-44c4-8f52-02c4bf94ce82" />
+   <img width="87" height="93" alt="Pixel Green Dinosaur Logo" src="https://github.com/user-attachments/assets/079405b9-7b29-44c4-8f52-02c4bf94ce82" />
    
    # Rocky Rush
    
