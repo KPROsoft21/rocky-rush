@@ -1,5 +1,6 @@
+
 <div align="center">
-  <img width="100" height="100" alt="Rocky Rush Dinosaur" src="https://github.com/KPROsoft21/rocky-rush/raw/main/src/rocky_rush/assets/sprites/dino.png" />
+   <img width="1297" height="1213" alt="Pixel Green Dinosaur Logo" src="https://github.com/user-attachments/assets/a89f4cc5-0360-4511-bfa1-02d796dcd768" />
   
   # Rocky Rush
 </div>
