@@ -1,3 +1,5 @@
+<img width="93" height="87" alt="Screenshot 2026-10-03 at 4 51 18 PM" src="https://github.com/user-attachments/assets/0585860a-e2b7-4816-8f68-2f8b1d69a47f" />
+
 # Rocky Rush
 
 Rocky Rush (2022) is a small arcade runner built with Python and pygame. It is inspired by the classic Chrome Dino game: jump over cacti, duck under flying obstacles, and chase a higher score as the game speeds up.
